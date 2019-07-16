@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{product.name}}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1>{{ product.name }}</h1>
+    <div class="row">
+
+
+    <div style="background-color: black" class="col-md-3 col-sm-12 col-xs-4">
+        <img class="img-fluid img-rounded" src="{{ product.image_url }}">
+        Hey</div>
+    <div class="col-md-4">Hey</div>
+    <div class="col-md-4">Hey</div>
+
+    </div>
+        <div style="background-color: black" class="row">
+        Hello
+    </div>
+</div>
+
+{% endblock %}
