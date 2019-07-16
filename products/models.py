@@ -9,7 +9,7 @@ class Product(models.Model):
     image_url = models.CharField(max_length=2083)
 
     def get_absolute_url(self):
-        return reverse('product-detail', kwargs={'pk': self.pk})
+        return reverse('products:detail', kwargs={'pk': self.pk})
 
 
 class Offer(models.Model):

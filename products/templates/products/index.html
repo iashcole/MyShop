@@ -19,8 +19,14 @@
 
       </div>
       <!-- /.col-lg-3 -->
-
       <div class="col-lg-9">
+        <div class="pt-3 text-right">
+          <a href="{% url 'products:product-add' %}">
+            <button class="btn btn-primary">
+              <span class="fa fa-plus"></span>&nbsp; Add
+            </button>
+          </a>
+        </div>
 
         <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -59,7 +65,7 @@
                 <h4 class="card-title">
                   <a href="{{ the_url }}">{{ product.name }}</a>
                 </h4>
-                <h5>$24.99</h5>
+                <h5>${{ product.price }}</h5>
                 <p class="card-text">{% lorem 30 w random %}</p>
               </div>
               <div class="card-footer">
