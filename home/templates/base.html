@@ -29,18 +29,18 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-home"></i> Home
+            <a class="nav-link {% if request.resolver_match.url_name == "home-page" %}active{% endif %}" href="{% url 'home:home-page' %}"><i class="fa fa-home"></i>&nbsp; Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item {% block active %}{% endblock %}">
-            <a class="nav-link" href="{% url 'products:index' %}"><i class="fa fa-shopping-basket"></i> Products</a>
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == "products-page" %}active{% endif %}" href="{% url 'products:products-page' %}"><i class="fa fa-shopping-basket"></i>&nbsp; Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-user-o"></i> About</a>
+              <a class="nav-link {% if request.resolver_match.url_name == "about-page" %}active{% endif %}" href="{% url 'home:about-page' %}"><i class="fa fa-user-o"></i>&nbsp; About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-phone"></i> Contact Us</a>
+            <a class="nav-link {% if request.resolver_match.url_name == "contact-page" %}active{% endif %}" href="{% url 'home:contact-page' %}"><i class="fa fa-phone"></i>&nbsp; Contact Us</a>
           </li>
         </ul>
       </div>

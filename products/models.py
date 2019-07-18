@@ -7,6 +7,7 @@ class Product(models.Model):
     price = models.FloatField()
     stock = models.IntegerField()
     image_url = models.CharField(max_length=2083)
+    # TODO: create a category here to sort things out
 
     def get_absolute_url(self):
         return reverse('products:detail', kwargs={'pk': self.pk})
